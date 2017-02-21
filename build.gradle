@@ -1,0 +1,20 @@
+group 'com.ny.mail'
+version '0.0.1-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework:spring-context-support:$springVersion"
+    compile "com.icegreen:greenmail-spring:$greenmailVersion"
+    
+    testCompile "junit:junit:$junitVerion"
+
+}
